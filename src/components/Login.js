@@ -71,10 +71,8 @@ export default function Login(props) {
       (error) => {
         console.log(error)
       }
-      
     );
   }
-
 
   return (
     <div>
