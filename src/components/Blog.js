@@ -75,21 +75,22 @@ export default function Blog() {
       <Navbar />
         <h1 className={classes.heading}>Köszöntelek a blogomon</h1>
         <div className={classes.search}>
-        <Input
-                    type="text"
-                    id="header-search"
-                    placeholder="Keresés"
-                    name="s"
-                    className={classes.input} 
-                    onChange={(event) =>handleSearch(event)} 
-                />
-                <Button 
-                    type="submit"
-                    variant="contained"
-                    color="primary"
-                    className={classes.button}
-                    >Keresés</Button>
-                    </div>
+          <Input
+              type="text"
+              id="header-search"
+              placeholder="Keresés"
+              name="s"
+              className={classes.input} 
+              onChange={(event) =>handleSearch(event)} 
+              />
+          <Button 
+              type="submit"
+              variant="contained"
+              color="primary"
+              className={classes.button}
+              >Keresés
+          </Button>
+        </div>
         <Grid container spacing={5} >
         {filteredData.map((post) => {
             return (
