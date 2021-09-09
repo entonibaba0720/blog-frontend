@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
       textAlign: 'center'
     },
     paper: {
-      width: '500px',
+      width: '80vw',
       display: 'flex',
       justifyContent: 'center',
       flexDirection: 'column',
@@ -48,7 +48,7 @@ export default function Blog() {
     const [filteredData, setFilteredData] = useState(allData);
    
    useEffect(() => {
-   UserService.getContent().then(
+   UserService.getFilteredContent().then(
         (response) => {
           setAllData(response.data);
           setFilteredData(response.data);
@@ -59,10 +59,11 @@ export default function Blog() {
       ); 
     }, []);
 
-
+  
     const handleSearch = (event) => {
       let value = event.target.value.toLowerCase();
       let result = [];
+      console.log(value)
       result = allData.filter((data) => {
         return data.title.search(value) !== -1;
       });

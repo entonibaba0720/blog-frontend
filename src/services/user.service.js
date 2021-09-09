@@ -13,7 +13,7 @@ const getContent = () => {
 
 // TODO: bekötni a keresést jól
 const getFilteredContent = (data) => {
-  return axios.get(API_URL + `posts/${data}`);
+  return axios.get(API_URL + "posts");
 };
 
 export default {
